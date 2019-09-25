@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/b_send_not"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/send_notification"
+        app:layout_constraintStart_toStartOf="@+id/search_key"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/b_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/start_search"
+        app:layout_constraintStart_toStartOf="@+id/search_key"
+        app:layout_constraintTop_toBottomOf="@+id/search_key" />
+
+    <EditText
+        android:id="@+id/search_key"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:hint="@string/search_with_google"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/b_send_not" />
+
+    <RadioGroup
+        android:id="@+id/choice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="@+id/b_search"
+        app:layout_constraintStart_toStartOf="@+id/b_search"
+        app:layout_constraintTop_toBottomOf="@+id/b_search">
+
+        <RadioButton
+            android:id="@+id/front_cam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/front_camera" />
+
+        <RadioButton
+            android:id="@+id/back_cam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/back_camera" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/b_launch_cam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/launch"
+        app:layout_constraintStart_toStartOf="@+id/choice"
+        app:layout_constraintTop_toBottomOf="@+id/choice" />
+
+    <TextView
+        android:id="@+id/no_choice"
+        android:layout_width="169dp"
+        android:layout_height="22dp"
+        app:layout_constraintBottom_toBottomOf="@+id/b_launch_cam"
+        app:layout_constraintStart_toEndOf="@+id/b_launch_cam"
+        app:layout_constraintTop_toTopOf="@+id/b_launch_cam" />
+
+    <Button
+        android:id="@+id/ch_activ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/check_photo"
+        app:layout_constraintStart_toStartOf="@+id/b_launch_cam"
+        app:layout_constraintTop_toBottomOf="@+id/b_launch_cam" />
+
+    <Button
+        android:id="@+id/calc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/calculator"
+        app:layout_constraintStart_toStartOf="@+id/ch_activ"
+        app:layout_constraintTop_toBottomOf="@+id/ch_activ" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
